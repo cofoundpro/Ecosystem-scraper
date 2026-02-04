@@ -217,11 +217,7 @@ Automatically scrapes UAE startup ecosystem websites, extracts organization data
    ├─ Add failed validations to review queue
    └─ Only save validated data to MongoDB
 
-4. STORAGE
-   ├─ Database: uae_ecosystem_db
-   ├─ Collection: organisations
-   ├─ Upsert logic (update existing or create new)
-   └─ Track source metadata and AI provider used
+
 ```
 
 ---
@@ -238,10 +234,6 @@ Automatically scrapes UAE startup ecosystem websites, extracts organization data
 - Randomizes browser fingerprints
 - Hides automation indicators
 
-**Database:**
-- MongoDB Atlas
-- Database: `uae_ecosystem_db`
-- Collection: `organisations`
 
 **AI Providers (with smart rotation):**
 1. **Cerebras** (Primary - 10 requests per cycle)
