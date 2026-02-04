@@ -11,6 +11,8 @@ node_modules/
 test-*.mjs
 test-*.js
 audit-and-fix-db.mjs
+**/*.test.js
+**/*.test.mjs
 
 # All markdown files except readme
 *.md

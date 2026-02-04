@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.mjs",
-    "test": "mocha **/*.test.js --timeout 10000",
+    "test": "mocha lib/**/*.test.js models/**/*.test.js scripts/**/*.test.js --timeout 10000",
     "test:schema": "mocha models/Organisation.test.js",
     "test:pbt": "mocha lib/**/*.test.js scripts/**/*.test.js --timeout 10000",
     "migrate": "node scripts/migrate-schema.js"

@@ -39,13 +39,32 @@ const TARGET_URLS = [
 
 // 1. CONFIGURATION
 dotenv.config();
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://emaileatup:9ogpX2adYNa2@cluster0.wklgg.mongodb.net/?appName=Cluster0";
+
+// Validate required environment variables
+const requiredEnvVars = ['MONGO_URI'];
+const missingEnvVars = requiredEnvVars.filter(varName => !process.env[varName]);
+
+if (missingEnvVars.length > 0) {
+    console.error('❌ Missing required environment variables:');
+    missingEnvVars.forEach(varName => console.error(`   - ${varName}`));
+    console.error('\nPlease configure these in your .env file');
+    process.exit(1);
+}
+
+const MONGO_URI = process.env.MONGO_URI;
 
 // 2. DATABASE CONNECTION
 async function dbConnect() {
     if (mongoose.connection.readyState >= 1) return;
-    await mongoose.connect(MONGO_URI, { dbName: "uae_ecosystem_db" });
-    console.log("✅ Connected to MongoDB Atlas");
+    
+    try {
+        await mongoose.connect(MONGO_URI, { dbName: "uae_ecosystem_db" });
+        console.log("✅ Connected to MongoDB Atlas");
+    } catch (error) {
+        console.error("❌ Failed to connect to MongoDB:", error.message);
+        console.error("   Please check your MONGO_URI in .env file");
+        throw error;
+    }
 }
 
 // 3. THE SMART PROCESSOR WITH VALIDATION
@@ -240,8 +259,8 @@ async function main() {
             degraded: 0,
             skipped: 0,
             byProvider: {
+                cerebras: 0,
                 openrouter: 0,
-                huggingface: 0,
                 moonshot: 0
             }
         };
@@ -304,8 +323,8 @@ async function main() {
         console.log(`AI degraded (default): ${aiStats.degraded}`);
         console.log(`AI skipped (no description): ${aiStats.skipped}`);
         console.log('\nBy Provider:');
+        console.log(`  - Cerebras: ${aiStats.byProvider.cerebras}`);
         console.log(`  - OpenRouter: ${aiStats.byProvider.openrouter}`);
-        console.log(`  - HuggingFace: ${aiStats.byProvider.huggingface}`);
         console.log(`  - Moonshot: ${aiStats.byProvider.moonshot}`);
         console.log('================================\n');
         
