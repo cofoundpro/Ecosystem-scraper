@@ -1,0 +1,505 @@
+[{
+  "_id": {
+    "$oid": "697d11e380b1850d37a8cf0b"
+  },
+  "name": "Ministry of Economy and Tourism (UAE)",
+  "__v": 0,
+  "categories": [
+    "POLICY & PUBLIC AGENCIES"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:38.141Z"
+  },
+  "roles": [
+    "Federal ministry responsible for entrepreneurship and SME policy, programs, and services in the UAE.",
+    "Provides guidance and resources for entrepreneurs and SMEs via the MOET portal."
+  ],
+  "subcategories": [
+    "National & Regional Enterprise Agencies"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:38.141Z"
+  },
+  "website": "https://www.moet.gov.ae/en/entrepreneurs-and-smes"
+},
+{
+  "_id": {
+    "$oid": "697d11e680b1850d37a8cf0c"
+  },
+  "name": "UAE SME (National Program for SMEs)",
+  "__v": 0,
+  "categories": [
+    "POLICY & PUBLIC AGENCIES"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:42.538Z"
+  },
+  "roles": [
+    "Provides business support services for SMEs across the UAE.",
+    "Supports SMEs through federal procurement allocation and programmatic assistance."
+  ],
+  "subcategories": [
+    "National & Regional Enterprise Agencies"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:42.538Z"
+  },
+  "website": "https://www.uaesme.ae/en/business-support-services"
+},
+{
+  "_id": {
+    "$oid": "697d11e880b1850d37a8cf0d"
+  },
+  "name": "Hub71",
+  "__v": 0,
+  "categories": [
+    "SUPPORT INFRASTRUCTURE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:43.987Z"
+  },
+  "roles": [
+    "Abu Dhabi-based community connecting founders, investors, and ecosystem enablers.",
+    "Provides programs, incentives, and workspace to accelerate startups."
+  ],
+  "subcategories": [
+    "Generalist Incubators & Accelerators"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:43.987Z"
+  },
+  "website": "https://hub71.com/"
+},
+{
+  "_id": {
+    "$oid": "697d11e880b1850d37a8cf0e"
+  },
+  "name": "DIFC Innovation Hub",
+  "__v": 0,
+  "categories": [
+    "GROWTH & INNOVATION"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:44.479Z"
+  },
+  "roles": [
+    "Provides innovation hub resources and ecosystem support for fintech and future-tech startups in DIFC."
+  ],
+  "subcategories": [
+    "Innovation Centres (Sector-Focused)"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:44.479Z"
+  },
+  "website": "https://www.difc.com/ecosystem/innovation-hub"
+},
+{
+  "_id": {
+    "$oid": "697d11e980b1850d37a8cf0f"
+  },
+  "name": "in5 Innovation Centers",
+  "__v": 0,
+  "categories": [
+    "SUPPORT INFRASTRUCTURE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:45.016Z"
+  },
+  "roles": [
+    "Provides incubation, coworking, and mentorship for startups in Dubai."
+  ],
+  "subcategories": [
+    "Generalist Incubators & Accelerators"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:45.016Z"
+  },
+  "website": "https://infive.ae"
+},
+{
+  "_id": {
+    "$oid": "697d11e980b1850d37a8cf10"
+  },
+  "name": "Dubai Founders HQ",
+  "__v": 0,
+  "categories": [
+    "NETWORKING & COMMUNITY"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:45.457Z"
+  },
+  "roles": [
+    "Community and networking platform for entrepreneurs and founders in Dubai.",
+    "Hosts events and peer networking for the startup ecosystem."
+  ],
+  "subcategories": [
+    "General Business Community & Membership"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:45.457Z"
+  },
+  "website": "https://www.dubaifoundershq.com/en/"
+},
+{
+  "_id": {
+    "$oid": "697d11ea80b1850d37a8cf11"
+  },
+  "name": "Khalifa Fund for Enterprise Development",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:45.979Z"
+  },
+  "roles": [
+    "Provides funding, advisory services, and training for startups and SMEs in the UAE."
+  ],
+  "subcategories": [
+    "Public & Development Banks"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:45.979Z"
+  },
+  "website": "https://www.khalifafund.ae/"
+},
+{
+  "_id": {
+    "$oid": "697d11eb80b1850d37a8cf13"
+  },
+  "name": "Sheraa",
+  "__v": 0,
+  "categories": [
+    "SUPPORT INFRASTRUCTURE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:46.882Z"
+  },
+  "roles": [
+    "Provides incubation and acceleration programs, grants, and mentorship for startups in Sharjah."
+  ],
+  "subcategories": [
+    "Generalist Incubators & Accelerators"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:46.882Z"
+  },
+  "website": "https://sheraa.ae/"
+},
+{
+  "_id": {
+    "$oid": "697d11eb80b1850d37a8cf14"
+  },
+  "name": "Dubai Future District Fund (DFDF)",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:47.392Z"
+  },
+  "roles": [
+    "Dubai-based venture platform anchored by DIFC and Dubai Future Foundation to strengthen startup and VC investment."
+  ],
+  "subcategories": [
+    "Venture Capital & Private Equity"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:47.392Z"
+  },
+  "website": "https://dfdf.vc/"
+},
+{
+  "_id": {
+    "$oid": "697d11ec80b1850d37a8cf16"
+  },
+  "name": "Flat6Labs",
+  "__v": 0,
+  "categories": [
+    "SUPPORT INFRASTRUCTURE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:47.856Z"
+  },
+  "roles": [
+    "Provides seed funding, accelerator programs, mentorship, and workspace for early-stage startups."
+  ],
+  "subcategories": [
+    "Generalist Incubators & Accelerators"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:47.856Z"
+  },
+  "website": "https://flat6labs.com/"
+},
+{
+  "_id": {
+    "$oid": "697d11ec80b1850d37a8cf17"
+  },
+  "name": "Shorooq Partners",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:48.295Z"
+  },
+  "roles": [
+    "Provides early-stage capital to MENA tech startups, supporting growth and innovation."
+  ],
+  "subcategories": [
+    "Venture Capital & Private Equity"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:48.295Z"
+  },
+  "website": "https://shorooq.com"
+},
+{
+  "_id": {
+    "$oid": "697d11ed80b1850d37a8cf18"
+  },
+  "name": "BECO Capital",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:48.795Z"
+  },
+  "roles": [
+    "Early-stage venture capital firm focused on technology and growth capital in the UAE and MENA."
+  ],
+  "subcategories": [
+    "Venture Capital & Private Equity"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:48.795Z"
+  },
+  "website": "https://becocapital.com/"
+},
+{
+  "_id": {
+    "$oid": "697d11ed80b1850d37a8cf19"
+  },
+  "name": "Middle East Venture Partners (MEVP)",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:49.225Z"
+  },
+  "roles": [
+    "Provides venture capital and private equity funding to startups across the GCC and Levant."
+  ],
+  "subcategories": [
+    "Venture Capital & Private Equity"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:49.225Z"
+  },
+  "website": "https://mevp.com"
+},
+{
+  "_id": {
+    "$oid": "697d11ed80b1850d37a8cf1a"
+  },
+  "name": "Global Ventures",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:49.669Z"
+  },
+  "roles": [
+    "Provides growth-stage capital to enterprise technology startups in the UAE and MENA."
+  ],
+  "subcategories": [
+    "Venture Capital & Private Equity"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:49.669Z"
+  },
+  "website": "https://global.vc"
+},
+{
+  "_id": {
+    "$oid": "697d11ee80b1850d37a8cf1e"
+  },
+  "name": "Wamda Capital",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:50.175Z"
+  },
+  "roles": [
+    "Provides early-stage and growth capital to high-growth tech startups across MENA."
+  ],
+  "subcategories": [
+    "Venture Capital & Private Equity"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:50.175Z"
+  },
+  "website": "https://wamda.com"
+},
+{
+  "_id": {
+    "$oid": "697d11ee80b1850d37a8cf1f"
+  },
+  "name": "VentureSouq",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:50.625Z"
+  },
+  "roles": [
+    "Provides early-stage funding and strategic support to UAE startups, particularly in fintech and marketplaces."
+  ],
+  "subcategories": [
+    "Venture Capital & Private Equity"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:50.625Z"
+  },
+  "website": "https://venturesouq.com"
+},
+{
+  "_id": {
+    "$oid": "697d11ef80b1850d37a8cf20"
+  },
+  "name": "Nuwa Capital",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:51.361Z"
+  },
+  "roles": [
+    "Provides strategic capital and support to early-stage startups across the MENA region."
+  ],
+  "subcategories": [
+    "Venture Capital & Private Equity"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:51.361Z"
+  },
+  "website": "https://nuwacapital.io"
+},
+{
+  "_id": {
+    "$oid": "697d11f080b1850d37a8cf21"
+  },
+  "name": "Dubai Angel Investors",
+  "__v": 0,
+  "categories": [
+    "FUNDING & FINANCE"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:51.866Z"
+  },
+  "roles": [
+    "Angel investor network providing early-stage investment and mentorship to UAE startups."
+  ],
+  "subcategories": [
+    "Angel Syndicates & Networks"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:51.866Z"
+  },
+  "website": "https://www.dubaiangelinvestors.me/"
+},
+{
+  "_id": {
+    "$oid": "697d11f080b1850d37a8cf22"
+  },
+  "name": "Dubai Department of Economy and Tourism (DET)",
+  "__v": 0,
+  "categories": [
+    "POLICY & PUBLIC AGENCIES"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:52.590Z"
+  },
+  "roles": [
+    "Official authority shaping Dubai's business environment and economic strategy.",
+    "Provides data, initiatives, and support programs for businesses and investors."
+  ],
+  "subcategories": [
+    "Local Government Authorities"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:52.590Z"
+  },
+  "website": "https://www.dubaidet.gov.ae/en/"
+},
+{
+  "_id": {
+    "$oid": "697d11f180b1850d37a8cf23"
+  },
+  "name": "Dubai International Financial Centre (DIFC)",
+  "__v": 0,
+  "categories": [
+    "POLICY & PUBLIC AGENCIES"
+  ],
+  "country": "United Arab Emirates",
+  "createdAt": {
+    "$date": "2026-01-30T20:17:53.019Z"
+  },
+  "roles": [
+    "International financial centre and free zone providing regulatory framework, licensing, and ecosystem support for financial services and fintech."
+  ],
+  "subcategories": [
+    "Local Government Authorities"
+  ],
+  "twitter": "",
+  "updatedAt": {
+    "$date": "2026-01-30T20:17:53.019Z"
+  },
+  "website": "https://www.difc.com/"
+}]

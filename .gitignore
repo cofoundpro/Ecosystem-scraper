@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Kiro folder
+.kiro/
+
+# Test files
+test-*.mjs
+test-*.js
+audit-and-fix-db.mjs
+
+# All markdown files except readme
+*.md
+!readme.md
+!README.md
+
+# Reports
+reports/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
