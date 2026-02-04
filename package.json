@@ -16,7 +16,9 @@
     "dotenv": "^16.4.5",
     "mongoose": "^8.2.0",
     "node-fetch": "^3.3.2",
-    "playwright": "^1.41.2"
+    "playwright": "^1.41.2",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "fast-check": "^4.5.3",

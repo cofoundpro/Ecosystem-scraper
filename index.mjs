@@ -1,11 +1,15 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { chromium } from "playwright";
+import { chromium } from "playwright-extra";
+import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import Organisation from "./models/Organisation.js";
 import { scrapeOrganisation, retryPageGoto, ErrorSummary } from "./lib/enhanced-scraper.js";
 import { classifyWithAI, initializeKeyPools } from "./lib/multi-provider-classifier.js";
 import { validateOrganisation, addToReviewQueue, saveReviewQueue, clearReviewQueue } from "./lib/validator.js";
 import { generateReport } from "./lib/reporter.js";
+
+// Add stealth plugin to avoid bot detection
+chromium.use(StealthPlugin());
 
 // Target URLs for scraping
 const TARGET_URLS = [
@@ -191,9 +195,10 @@ async function main() {
                 const page = await browser.newPage();
                 
                 // Use retry logic with exponential backoff (Requirements 8.1, 8.2)
+                // Wait for networkidle to ensure page is fully loaded
                 const response = await retryPageGoto(page, url, {
-                    waitUntil: 'domcontentloaded',
-                    timeout: 30000
+                    waitUntil: 'networkidle',
+                    timeout: 45000
                 }, errorSummary);
                 
                 if (!response) {
@@ -202,8 +207,11 @@ async function main() {
                     continue;
                 }
                 
-                // Extract data using enhanced scraper
-                const orgData = await scrapeOrganisation(url, page);
+                // Wait a bit more for dynamic content to load
+                await page.waitForTimeout(2000);
+                
+                // Extract data using enhanced scraper (pass browser instance)
+                const orgData = await scrapeOrganisation(url, page, browser);
                 
                 // Only process if we got a valid name
                 if (orgData.name) {

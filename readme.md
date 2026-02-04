@@ -156,12 +156,29 @@ If OpenRouter fails or is rate-limited:
 2. If Cerebras fails, tries Moonshot
 3. If all fail, saves organization without AI classification (flagged for review)
 
-### Round-Robin Key Rotation
+### Smart Provider Rotation
 
-Multiple API keys per provider are rotated automatically:
-- Distributes requests evenly across keys
-- Maximizes rate limits
-- Removes exhausted keys from rotation
+The bot uses an intelligent rotation strategy to maximize throughput:
+
+**Rotation Cycle:**
+- Cerebras: 10 requests (fastest, highest limit)
+- OpenRouter: 10 requests (free tier, good quality)
+- Moonshot: 2 requests (lowest limit, use sparingly)
+- Then repeats the cycle
+
+**Fallback Logic:**
+- If the selected provider fails, automatically tries other providers
+- Ensures continuous operation even if one provider is down
+- Tracks rotation progress: `Provider rotation: cerebras (7/10)`
+
+### Rate Limiting
+
+Built-in rate limiting respects provider limits:
+- **Cerebras**: 30 requests/minute (2 second delay between requests)
+- **OpenRouter**: 20 requests/minute (3 second delay between requests)
+- **Moonshot**: 3 requests/minute (20 second delay between requests)
+
+The bot automatically waits between requests to avoid hitting rate limits.
 
 
 ## What It Does
@@ -181,18 +198,19 @@ Automatically scrapes UAE startup ecosystem websites, extracts organization data
 ## How It Works
 
 ```
-1. SCRAPING
+1. SCRAPING (using Playwright)
    ├─ Visit target URLs (13 UAE ecosystem sources)
    ├─ Extract root domain title as organization name
    ├─ Skip invalid titles (error pages, access denied)
    ├─ Extract description, Twitter handle, structured data
    └─ Use retry logic with exponential backoff (1s, 2s, 4s)
 
-2. AI CLASSIFICATION
-   ├─ Try OpenRouter (arcee-ai/trinity, google/gemma models)
-   ├─ Fallback to Cerebras (gpt-oss-120b, ~150ms response)
-   ├─ Fallback to Moonshot (kimi-k2, moonshot-v1 models)
-   └─ Graceful degradation if all providers fail
+2. AI CLASSIFICATION (Smart Rotation)
+   ├─ Cerebras: 10 requests (30 RPM, fastest, primary)
+   ├─ OpenRouter: 10 requests (20 RPM, free tier)
+   ├─ Moonshot: 2 requests (3 RPM, lowest limit)
+   ├─ Repeat cycle: Cerebras → OpenRouter → Moonshot
+   └─ Fallback to other providers if selected one fails
 
 3. VALIDATION
    ├─ Validate URLs, categories, subcategories, required fields
@@ -215,30 +233,39 @@ Automatically scrapes UAE startup ecosystem websites, extracts organization data
 - JavaScript (ES Modules)
 
 **Browser Automation:**
-- Playwright (Chromium/Edge)
+- Playwright Extra (with Stealth Plugin)
+- Bypasses bot detection
+- Randomizes browser fingerprints
+- Hides automation indicators
 
 **Database:**
 - MongoDB Atlas
 - Database: `uae_ecosystem_db`
 - Collection: `organisations`
 
-**AI Providers (with fallback):**
-1. **OpenRouter** (Primary)
-   - Models: `arcee-ai/trinity-large-preview:free`, `google/gemma-3-4b-it:free`
-   - Free tier with rate limits
-   
-2. **Cerebras** (Fallback)
+**AI Providers (with smart rotation):**
+1. **Cerebras** (Primary - 10 requests per cycle)
    - Model: `gpt-oss-120b`
+   - Rate limit: 30 requests/minute (2 second delay between requests)
    - Ultra-fast inference (~150ms)
    
-3. **Moonshot AI** (Secondary Fallback)
+2. **OpenRouter** (Secondary - 10 requests per cycle)
+   - Models: `arcee-ai/trinity-large-preview:free`, `google/gemma-3-4b-it:free`
+   - Rate limit: 20 requests/minute (3 second delay between requests)
+   - Free tier with rate limits
+   
+3. **Moonshot AI** (Tertiary - 2 requests per cycle)
    - Models: `kimi-k2-0905-preview`, `moonshot-v1-32k`
+   - Rate limit: 3 requests/minute (20 second delay between requests)
    - Chinese AI provider
+
+**Rotation Pattern:** Cerebras (10) → OpenRouter (10) → Moonshot (2) → Repeat
 
 **Key Libraries:**
 - Mongoose (MongoDB ODM)
 - dotenv (Environment config)
-- Playwright (Web scraping)
+- Playwright Extra (Web scraping with stealth)
+- Puppeteer Stealth Plugin (Bot detection bypass)
 
 ---
 
